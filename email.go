@@ -12,10 +12,14 @@ func Create(m *email.Message) *Message {
 	}
 }
 
-func (m *Message) From() string {
+func (m *Message) GetFrom() string {
 	return m.Message.From
 }
 
-func (m *Message) To() []string {
+func (m *Message) GetTo() []string {
 	return m.Tolist()
+}
+
+func (m *Message) GetBytes() []byte {
+	return m.Bytes()
 }
