@@ -13,7 +13,7 @@ func Create(m *email.Message) *Message {
 }
 
 func (m *Message) GetFrom() string {
-	return m.Message.From
+	return m.Message.From.Address
 }
 
 func (m *Message) GetTo() []string {
